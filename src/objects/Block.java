@@ -17,9 +17,11 @@ public class Block extends GameObject {
     Texture tex = Game.getInstance();
     private int type;
 
-    public Block(int type, float x, float y, ObjectId id){
+    public Block(int type, float x,float y, ObjectId id){
         super(x,y,id); this.type=type;
     }
+
+
 
     public float getHeight(){return height;}
     public float getWidth() {return width;}

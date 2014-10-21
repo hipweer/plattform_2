@@ -136,6 +136,7 @@ public class Player extends GameObject{
     public void bigSize(){ height += 5; width *= 2;x -=width/2;}
     public void normalSize(){ height -= 5; width /= 2;x +=width/2;}
 
-
+    public float getX() {return  x;}
+    public float getY() {return  y;}
 
 }

@@ -144,8 +144,10 @@ public class Game extends Canvas implements Runnable{
             for (int xx = 0; xx < 640*20; xx += 640) {
                 g.drawImage(clouds,xx,0,800,640,this);
              }
-            handler.render(g);
 
+            handler.render(g);
+        g.setColor(new Color(255, 255, 255,25));
+        g.fillOval((int)handler.getPlayerX()-60,(int)handler.getPlayerY()-50, 150, 150);
 
         g2d.translate(-cam.getX(),-cam.getY()); //end of cam
 
