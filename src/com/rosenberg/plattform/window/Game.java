@@ -29,6 +29,7 @@ public class Game extends Canvas implements Runnable{
     //Object
     Handler handler;
     Camera cam;
+    KeyInput keyinput;
     static Texture tex;
 
     //Constructor
@@ -68,7 +69,7 @@ public class Game extends Canvas implements Runnable{
        //handler.addObject(new Player(100,100,handler, ObjectId.Player));
        //handler.createLevel();
 
-        this.addKeyListener(new KeyInput(handler, this));
+        this.addKeyListener(keyinput = new KeyInput(handler, this));
 
         pause = false;
     }
@@ -192,6 +193,8 @@ public class Game extends Canvas implements Runnable{
 
 
     public void ifDead() {
+        removeKeyListener(keyinput);
+        handler.clear();
         init();
     }
 

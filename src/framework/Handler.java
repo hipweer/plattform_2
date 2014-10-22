@@ -45,7 +45,9 @@ public class Handler {
     public void removeObject(GameObject object){
         this.object.remove(object);
     }
-
+    public void clear(){
+        this.object.clear();
+    }
     public int getPlayerX(){
         int tempX= 0;
         for (int i = 0; i < object.size() ; i++) {

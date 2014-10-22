@@ -54,8 +54,8 @@ public class KeyInput extends KeyAdapter {
 
         }
         if(key == KeyEvent.VK_P){
-            if(!game.getPause())game.setPause(true);
-            else game.setPause(false);
+            game.setPause(!game.getPause());
+
         }
 
     }
